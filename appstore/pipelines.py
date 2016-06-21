@@ -12,6 +12,6 @@ class AppstorePipeline(object):
 
 
     def process_item(self, item, spider):
-        val = "{0}\t{1}\t{2}\n".format(item['appid'], item['title'], item['intro'])
+        val = "{0}\t{1}\t{2}\t{3}\t{4}\n".format(item['appid'], item['url'], item['title'], item['recommended'], item['intro'])
         self.file.write(val)
         return item
